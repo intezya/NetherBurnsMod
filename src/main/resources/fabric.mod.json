@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "netherburns",
+  "version": "${version}",
+  "name": "NetherBurns",
+  "description": "TODO",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/netherburns/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.intezya.netherburns.NetherBurns"
+    ]
+  },
+  "mixins": [
+    "netherburns.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
