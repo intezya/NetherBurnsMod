@@ -1,4 +1,4 @@
-package com.intezya.harderthanhard.mixin;
+package com.intezya.harderthanhard.mixin.nether;
 
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.server.network.ServerPlayerEntity;

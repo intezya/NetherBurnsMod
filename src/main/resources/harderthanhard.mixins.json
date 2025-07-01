@@ -4,8 +4,9 @@
   "package": "com.intezya.harderthanhard.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "PlayerManagerMixin",
-    "ServerPlayerEntityMixin"
+    "food.FoodComponentsMixin",
+    "nether.PlayerManagerMixin",
+    "nether.ServerPlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
