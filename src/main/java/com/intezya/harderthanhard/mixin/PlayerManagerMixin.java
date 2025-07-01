@@ -1,4 +1,4 @@
-package com.intezya.netherburns.mixin;
+package com.intezya.harderthanhard.mixin;
 
 import net.minecraft.network.ClientConnection;
 import net.minecraft.server.PlayerManager;

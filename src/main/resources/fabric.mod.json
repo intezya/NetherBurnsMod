@@ -1,21 +1,21 @@
 {
   "schemaVersion": 1,
-  "id": "netherburns",
+  "id": "harderthanhard",
   "version": "${version}",
-  "name": "NetherBurns",
+  "name": "Harder than hard",
   "description": "TODO",
   "authors": [],
   "contact": {},
   "license": "All-Rights-Reserved",
-  "icon": "assets/netherburns/icon.png",
+  "icon": "assets/harderthanhard/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.intezya.netherburns.NetherBurns"
+      "com.intezya.harderthanhard.HarderThanHard"
     ]
   },
   "mixins": [
-    "netherburns.mixins.json"
+    "harderthanhard.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

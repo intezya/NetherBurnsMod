@@ -1,4 +1,4 @@
-package com.intezya.netherburns.mixin;
+package com.intezya.harderthanhard.mixin;
 
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.server.network.ServerPlayerEntity;

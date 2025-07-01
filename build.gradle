@@ -14,7 +14,7 @@ loom {
     splitEnvironmentSourceSets()
 
     mods {
-        "netherburns" {
+        "harderthanhard" {
             sourceSet sourceSets.main
             sourceSet sourceSets.client
         }

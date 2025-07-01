@@ -1,11 +1,9 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.intezya.netherburns.mixin",
+  "package": "com.intezya.harderthanhard.mixin.client",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
-    "PlayerManagerMixin",
-    "ServerPlayerEntityMixin"
+  "client": [
   ],
   "injectors": {
     "defaultRequire": 1
