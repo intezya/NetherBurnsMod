@@ -36,25 +36,25 @@ public class FoodComponentsMixin {
                     continue;
                 }
 
-                if (original == FoodComponents.GOLDEN_APPLE || original == FoodComponents.GOLDEN_CARROT) {
+                if (original == FoodComponents.GOLDEN_APPLE || original == FoodComponents.ENCHANTED_GOLDEN_APPLE) {
                     continue;
                 }
 
                 int newNutrition = Math.max(1, (int) Math.floor(original.nutrition() / 2f));
-                float newSaturation = Math.max(0.5f, original.saturation() / 2);
+                float oldSaturationModifier = originalModifierFromFood(original);
+                float newSaturationModifier = Math.max(0.4f, oldSaturationModifier) / 2;
 
-                FoodComponent.Builder nerfedBuilder = (new FoodComponent.Builder())
-                        .nutrition(newNutrition)
-                        .saturationModifier(newSaturation);
+                FoodComponent.Builder nerfedFoodBuilder = (new FoodComponent.Builder())
+                    .nutrition(newNutrition)
+                    .saturationModifier(newSaturationModifier);
 
                 if (original.canAlwaysEat()) {
-                    nerfedBuilder = nerfedBuilder.alwaysEdible();
+                    nerfedFoodBuilder = nerfedFoodBuilder.alwaysEdible();
                 }
 
-                FoodComponent nerfed = nerfedBuilder.build();
+                FoodComponent nerfed = nerfedFoodBuilder.build();
 
                 forceSetStaticFinal(field, nerfed);
-
             } catch (Throwable e) {
                 logger.warn("failed to nerf food: ", e);
             }
@@ -75,5 +75,10 @@ public class FoodComponentsMixin {
         long staticFieldOffset = unsafe.staticFieldOffset(field);
 
         unsafe.putObject(staticFieldBase, staticFieldOffset, value);
+    }
+
+    @Unique
+    private static float originalModifierFromFood(FoodComponent foodComponent) {
+        return foodComponent.saturation() / foodComponent.nutrition() / 2;
     }
 }
